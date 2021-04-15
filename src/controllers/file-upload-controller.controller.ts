@@ -33,13 +33,13 @@ export class FileUploadController {
     @inject(RestBindings.Http.RESPONSE) response: Response,
   ): Promise<object> {
     return new Promise<object>((resolve, reject) => {
-      //this.handler(request, response, err => {
-        //if (err) reject(err);
-        //else {
-        //  resolve(FileUploadController.getFilesAndFields(request));
-        //}
+      this.handler(request, response, err => {
+        if (err) reject(err);
+        else {
+          resolve(FileUploadController.getFilesAndFields(request));
+        }
       });
-    //});
+    });
   }
 }
   
